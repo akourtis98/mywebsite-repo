@@ -1,0 +1,26 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "My personal portfolio website.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akourtis98/mywebsite-repo.git"
+  },
+  "author": "Alexandros Kourtis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akourtis98/mywebsite-repo/issues"
+  },
+  "homepage": "https://github.com/akourtis98/mywebsite-repo#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "@types/node": "^9.6.5"
+  }
+}
