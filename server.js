@@ -12,7 +12,7 @@ mongoose
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.log(err));
     
-app.get('/', (req, res) => res.send('Hello'));
+app.get('/', (req, res) => res.sendfile('html/index.html'));
 
 app.use('/api/users', users);
 
