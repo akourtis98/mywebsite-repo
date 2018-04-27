@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const users = require('./routes/api/users');
+const users = require('./src/routes/api/users');
 
 const db = require('./config/keys').mongoURI;
 
@@ -12,7 +12,7 @@ mongoose
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.log(err));
     
-app.get('/', (req, res) => res.sendfile('html/index.html'));
+app.get('/', (req, res) => res.sendfile('src/html/index.html'));
 
 app.use('/api/users', users);
 

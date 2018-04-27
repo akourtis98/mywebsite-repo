@@ -2,6 +2,13 @@
     margin-top: 20px;
   }
   
+  .slider{
+    height: 550px !important;
+    border: 1px solid black;
+    background-color: gray;
+  }
+  
+
   .section-search input {
     padding: 5px !important;
     font-size: 18px !important;
@@ -16,4 +23,7 @@
   .section-contact h5 {
     margin-bottom: 30px;
   }
-  
+
+  a{
+    font-size: 20px !important;
+  }
