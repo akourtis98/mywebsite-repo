@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -16,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/akourtis98/mywebsite-repo/issues"
   },
-  "homepage": "https://github.com/akourtis98/mywebsite-repo#readme",
+  "homepage": "https://github.com/akourtis98/mywebsite-repo/",
   "devDependencies": {
     "nodemon": "^1.17.3"
   },
