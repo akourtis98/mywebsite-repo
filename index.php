@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="sript.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- <script src="sript.js"></script> -->
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/js/all.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
-
     <title>Aspiring Web Developer</title>
   </head>
   <!-- <div id="root"></div> -->
@@ -168,30 +167,37 @@
             </div>
           </div>
         </section>
-        
+        <?php include('src/php/form_process.php'); ?>
     <!-- Section: Contact -->
     <section id="contact" class="section section-contact scrollspy">
       <div class="container">
         <div class="row">
             <div class="card-panel grey lighten-3">
               <h5>For business inquiries, please fill out this form:</h5>
+              <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
               <div class="input-field">
-                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Name" id="name" name="name">
                 <label for="name"></label>
+                <span class="error"><?= $name_error?></span>
               </div>
               <div class="input-field">
-                <input type="email" placeholder="Email" id="email">
+                <input type="text" placeholder="Email" id="email" name="email">
                 <label for="email"></label>
+                <span class="error"><?= $email_error?></span>
               </div>
               <div class="input-field">
-                <input type="text" placeholder="Phone" id="phone">
+                <input type="text" placeholder="Phone" id="phone" name="phone">
                 <label for="phone"></label>
+                <span class="error"><?= $phone_error?></span>
               </div>
               <div class="input-field">
-                <textarea class="materialize-textarea" placeholder="Enter Message" id="message"></textarea>
+                <textarea class="materialize-textarea" placeholder="Enter Message" id="message" name="message" type="text"></textarea>
                 <label for="message"></label>
+                <span class="error"><?= $message_error?></span>
               </div>
               <input style="background-color: black;" type="submit" value="Submit" class="btn">
+              <div class="success">should be here: <?= $success; ?></div>
+              </form>
             </div>
         </div>
       </div>
